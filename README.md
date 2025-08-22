@@ -44,17 +44,6 @@
 </tr>
 </table>
 
-## 🖼️ Screenshots
-
-<details>
-<summary>📱 <strong>Click to view screenshots</strong></summary>
-
-| Payment Form | Transaction Dashboard | PDF Receipt |
-|:---:|:---:|:---:|
-| ![Payment Form](https://via.placeholder.com/300x200/4F46E5/ffffff?text=Payment+Form) | ![Dashboard](https://via.placeholder.com/300x200/10B981/ffffff?text=Dashboard) | ![Receipt](https://via.placeholder.com/300x200/F59E0B/ffffff?text=PDF+Receipt) |
-| Modern card input with real-time validation | Interactive transaction history with filters | Professional receipt generation |
-
-</details>
 
 ## 🎮 Interactive Demo
 
@@ -393,3 +382,4 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 [![Powered by Coffee](https://img.shields.io/badge/Powered%20by-☕-brown.svg?style=for-the-badge)](https://buymeacoffee.com/anshmittal)
 
 </div>
+
