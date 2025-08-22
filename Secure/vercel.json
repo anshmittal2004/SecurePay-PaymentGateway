@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd Secure && npm run build",
+  "outputDirectory": "Secure/dist",
+  "installCommand": "cd Secure && npm install",
+  "framework": "vite"
+}
