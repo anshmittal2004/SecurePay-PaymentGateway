@@ -1,154 +1,81 @@
-# 💳 SecurePay Payment Gateway
+# SecurePay Payment Gateway
 
-<div align="center">
+A secure payment gateway built with React and Flask, featuring card type detection, fraud prevention, and PDF receipt generation.
 
-![SecurePay Logo](https://img.shields.io/badge/SecurePay-Payment%20Gateway-blue?style=for-the-badge&logo=visa)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-18.0+-61DAFB.svg?logo=react)](https://reactjs.org/)
+[![Flask](https://img.shields.io/badge/Flask-2.0+-000000.svg?logo=flask)](https://flask.palletsprojects.com/)
 
-**A modern, secure payment gateway with Apple-inspired design and enterprise-grade security**
+## Features
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
-[![React](https://img.shields.io/badge/React-18.0+-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
-[![Flask](https://img.shields.io/badge/Flask-2.0+-000000?style=flat-square&logo=flask)](https://flask.palletsprojects.com/)
-[![Vite](https://img.shields.io/badge/Vite-4.0+-646CFF?style=flat-square&logo=vite)](https://vitejs.dev/)
+- **Multi-Card Support**: Visa, Mastercard, American Express, RuPay, Discover, JCB, Diners Club
+- **Real-time Card Detection**: Automatic card type identification
+- **Fraud Detection**: Flags suspicious transactions and patterns
+- **PDF Receipts**: Professional receipt generation
+- **Secure Processing**: SHA-256 card number hashing
+- **Responsive Design**: Works on desktop and mobile
 
-[🚀 Live Demo](#-live-demo) • [📖 Documentation](#-api-endpoints) • [🔧 Installation](#-installation) • [🤝 Contributing](#-contributing)
+## Tech Stack
 
-</div>
+**Frontend:**
+- React with Vite
+- Lucide React (icons)
+- jsPDF (PDF generation)
+- CSS with Glassmorphism
 
----
+**Backend:**
+- Flask (Python)
+- SQLite database
+- SHA-256 encryption
 
-## ✨ Features at a Glance
+## Installation
 
-<table>
-<tr>
-<td width="50%">
+### Prerequisites
+- Node.js 16+
+- Python 3.8+
 
-### 🎯 **Core Features**
-- 💳 **7+ Card Types Supported**
-- 🔍 **Real-time Card Detection**
-- 🛡️ **Advanced Fraud Prevention**
-- 📄 **Professional PDF Receipts**
-- 📱 **Mobile-First Design**
-
-</td>
-<td width="50%">
-
-### 🔐 **Security First**
-- 🔒 **SHA-256 Encryption**
-- ⚡ **Rapid Transaction Detection**
-- 🚨 **Smart Fraud Alerts**
-- ✅ **Input Validation**
-- 🏦 **Bank-Grade Security**
-
-</td>
-</tr>
-</table>
-
-
-## 🎮 Interactive Demo
+### Quick Start
 
 ```bash
-# Quick start in 3 commands
-git clone https://github.com/anshmittal2004/SecurePay-PaymentGateway.git
-cd SecurePay-PaymentGateway && npm install && npm run dev
-# 🎉 Your payment gateway is now running on localhost:5173
-```
-
-<div align="center">
-
-### 🧪 **Try These Test Cards**
-
-| Card Brand | Test Number | Expected Result |
-|:---:|:---:|:---:|
-| 💙 **Visa** | `4412 3456 7890 1234` | ✅ Approved |
-| 🟠 **Mastercard** | `5412 3456 7890 1234` | ✅ Approved |
-| 🟢 **RuPay** | `6012 3456 7890 1234` | ✅ Approved |
-| ⚠️ **Fraud Test** | `0000 1234 5678 9012` | 🚫 Flagged |
-
-</div>
-
-## 🏗️ Architecture Overview
-
-```mermaid
-graph TB
-    A[🌐 React Frontend] -->|REST API| B[🐍 Flask Backend]
-    B -->|Store/Retrieve| C[🗄️ SQLite Database]
-    A -->|Generate| D[📄 PDF Receipts]
-    A -->|Detect| E[💳 Card Types]
-    B -->|Hash| F[🔐 SHA-256]
-    B -->|Monitor| G[🛡️ Fraud Detection]
-```
-
-## 🛠️ Tech Stack
-
-<div align="center">
-
-### Frontend
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-
-### Backend
-[![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)](https://python.org/)
-[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
-[![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/)
-
-</div>
-
-## ⚡ Installation
-
-<details>
-<summary><strong>🚀 One-Click Setup (Recommended)</strong></summary>
-
-```bash
-# Clone and setup everything
+# Clone repository
 git clone https://github.com/anshmittal2004/SecurePay-PaymentGateway.git
 cd SecurePay-PaymentGateway
 
 # Frontend setup
-cd Secure && npm install && npm run dev &
-
-# Backend setup (new terminal)
-cd ../backend && pip install -r requirements.txt && python app.py
-```
-
-</details>
-
-<details>
-<summary><strong>🔧 Manual Setup</strong></summary>
-
-### Frontend Setup
-```bash
 cd Secure
 npm install
 npm run dev
-```
 
-### Backend Setup
-```bash
+# Backend setup (new terminal)
 cd backend
 pip install -r requirements.txt
 python app.py
 ```
 
-</details>
+**Access:**
+- Frontend: http://localhost:5173
+- Backend: http://localhost:5000
 
-<div align="center">
+## Project Structure
 
-### 🎯 **Access Points**
-| Service | URL | Status |
-|:---:|:---:|:---:|
-| 🌐 **Frontend** | http://localhost:5173 | ![Online](https://img.shields.io/badge/status-online-brightgreen) |
-| 🔌 **API** | http://localhost:5000 | ![Online](https://img.shields.io/badge/status-online-brightgreen) |
+```
+SecurePay-PaymentGateway/
+├── Secure/                    # React frontend
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── TransactionForm.jsx
+│   │   │   └── TransactionDashboard.jsx
+│   │   ├── utils/mockData.js
+│   │   └── App.jsx
+├── backend/                   # Flask backend
+│   ├── app.py
+│   ├── database.py
+│   └── requirements.txt
+```
 
-</div>
+## API Endpoints
 
-## 📚 API Documentation
-
-<details>
-<summary><strong>🔌 API Endpoints</strong></summary>
-
-### 💳 Process Payment
+### Process Payment
 ```http
 POST /api/authorize
 Content-Type: application/json
@@ -161,225 +88,76 @@ Content-Type: application/json
 }
 ```
 
-**Response:**
-```json
-{
-  "status": "approved",
-  "transaction_id": "TXN_001",
-  "card_type": "Visa",
-  "fraud_detected": false
-}
-```
-
-### 📊 Get Transactions
+### Get Transactions
 ```http
 GET /api/transactions
 ```
 
-**Response:**
-```json
-{
-  "transactions": [
-    {
-      "id": 1,
-      "card_hash": "sha256_hash",
-      "amount": 1500.00,
-      "status": "approved",
-      "timestamp": "2024-01-01T12:00:00Z"
-    }
-  ]
-}
-```
+## Supported Cards
 
-</details>
+| Card Type | Pattern | Example |
+|-----------|---------|---------|
+| Visa | 4 | 4412 3456 7890 1234 |
+| Mastercard | 51-55 | 5412 3456 7890 1234 |
+| American Express | 34, 37 | 3412 345678 90123 |
+| RuPay | 60, 65, 81, 82 | 6012 3456 7890 1234 |
+| Discover | 6011, 644-649 | 6011 1234 5678 9012 |
+| JCB | 3528-3589 | 3528 1234 5678 9012 |
+| Diners Club | 30, 36, 38 | 3012 345678 9012 |
 
-## 💳 Supported Payment Methods
+## Security Features
 
-<div align="center">
+- **Card Encryption**: SHA-256 hashing before database storage
+- **Fraud Detection**: 
+  - High-value transactions (>₹10,000)
+  - Rapid transactions from same card
+  - Suspicious card patterns
+- **Input Validation**: Comprehensive validation for all fields
+- **No Plain Text Storage**: Card numbers never stored in plain text
 
-| Brand | Pattern | Example | Status |
-|:---:|:---:|:---:|:---:|
-| ![Visa](https://img.shields.io/badge/Visa-1A1F71?style=flat-square&logo=visa) | `4***` | `4412 3456 7890 1234` | ✅ |
-| ![Mastercard](https://img.shields.io/badge/Mastercard-EB001B?style=flat-square&logo=mastercard) | `51-55` | `5412 3456 7890 1234` | ✅ |
-| ![American Express](https://img.shields.io/badge/Amex-2E77BC?style=flat-square&logo=americanexpress) | `34,37` | `3412 345678 90123` | ✅ |
-| ![RuPay](https://img.shields.io/badge/RuPay-00A651?style=flat-square) | `60,65,81,82` | `6012 3456 7890 1234` | ✅ |
-| ![Discover](https://img.shields.io/badge/Discover-FF6000?style=flat-square&logo=discover) | `6011,644-649` | `6011 1234 5678 9012` | ✅ |
-| ![JCB](https://img.shields.io/badge/JCB-0E4C96?style=flat-square) | `3528-3589` | `3528 1234 5678 9012` | ✅ |
-| ![Diners](https://img.shields.io/badge/Diners-0079BE?style=flat-square) | `30,36,38` | `3012 345678 9012` | ✅ |
+## Testing
 
-</div>
+Use these test cards:
 
-## 🛡️ Security Features
+| Purpose | Card Number | Result |
+|---------|-------------|--------|
+| Valid Visa | 4412 3456 7890 1234 | Approved |
+| Valid Mastercard | 5412 3456 7890 1234 | Approved |
+| Fraud Detection | 0000 1234 5678 9012 | Flagged |
 
-<div align="center">
-
-```mermaid
-graph LR
-    A[💳 Card Input] --> B[✅ Validation]
-    B --> C[🔍 Fraud Check]
-    C --> D[🔐 SHA-256 Hash]
-    D --> E[💾 Secure Storage]
-    
-    F[🚨 High Amount] --> C
-    G[⚡ Rapid Transactions] --> C
-    H[🎭 Pattern Detection] --> C
-```
-
-</div>
-
-### 🔒 **Fraud Detection Rules**
-- 💰 **High-value transactions**: Flags amounts > ₹10,000
-- ⚡ **Rapid transactions**: Detects multiple transactions within 60 seconds
-- 🎭 **Pattern recognition**: Identifies suspicious card patterns
-- 🔍 **Real-time monitoring**: Instant fraud alerts with detailed tooltips
-
-## 🎨 Design Philosophy
-
-<table>
-<tr>
-<td width="30%" align="center">
-<h3>🍎 Apple Inspired</h3>
-<p>Clean, minimalist interface with system fonts and subtle animations</p>
-</td>
-<td width="30%" align="center">
-<h3>✨ Glassmorphism</h3>
-<p>Modern blur effects and transparency for premium feel</p>
-</td>
-<td width="30%" align="center">
-<h3>📱 Mobile First</h3>
-<p>Responsive design that works seamlessly across all devices</p>
-</td>
-</tr>
-</table>
-
-## 📈 Performance Metrics
-
-<div align="center">
-
-| Metric | Performance | Status |
-|:---:|:---:|:---:|
-| 🔍 **Card Detection** | 99.9% Accuracy | ![Excellent](https://img.shields.io/badge/status-excellent-brightgreen) |
-| ⚡ **Transaction Speed** | <200ms | ![Fast](https://img.shields.io/badge/speed-fast-green) |
-| 📄 **PDF Generation** | <500ms | ![Optimized](https://img.shields.io/badge/status-optimized-blue) |
-| 📱 **Mobile Support** | 100% Compatible | ![Perfect](https://img.shields.io/badge/mobile-perfect-brightgreen) |
-
-</div>
-
-## 🗺️ Roadmap
-
-<details>
-<summary><strong>🔮 Upcoming Features</strong></summary>
-
-### 🚀 **Phase 1 - Enhanced Security**
-- [ ] 🔐 OAuth 2.0 Integration
-- [ ] 🌐 Rate Limiting
-- [ ] 🏦 Visa API Integration
-- [ ] 📋 PCI DSS Compliance
-
-### 📈 **Phase 2 - Scalability**
-- [ ] 🐘 PostgreSQL Migration
-- [ ] 🗄️ Redis Caching
-- [ ] 🐳 Docker Containerization
-- [ ] ☁️ AWS Deployment
-
-### ✨ **Phase 3 - Features**
-- [ ] 💱 Multi-currency Support
-- [ ] 🔄 Recurring Payments
-- [ ] 📊 Advanced Analytics
-- [ ] 📱 Mobile App
-
-</details>
-
-## 🧪 Testing
-
+Run tests:
 ```bash
-# Run comprehensive test suite
 cd backend
-python -m pytest tests/ -v
-
-# Frontend testing
-cd Secure
-npm run test
-
-# Integration testing
-npm run test:integration
+python -m pytest tests/
 ```
 
-<div align="center">
+## Future Enhancements
 
-![Test Coverage](https://img.shields.io/badge/coverage-85%25-brightgreen?style=for-the-badge)
-![Tests](https://img.shields.io/badge/tests-24%20passed-brightgreen?style=for-the-badge)
+- PostgreSQL for production scalability
+- OAuth authentication
+- Rate limiting
+- Multi-currency support
+- Recurring payments
+- Advanced analytics
 
-</div>
+## Contributing
 
-## 🤝 Contributing
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/new-feature`)
+3. Commit changes (`git commit -m 'Add new feature'`)
+4. Push to branch (`git push origin feature/new-feature`)
+5. Open Pull Request
 
-<div align="center">
+## License
 
-**We love contributions! Here's how you can help:**
+This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
-[![Contribute](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](CONTRIBUTING.md)
-[![Issues](https://img.shields.io/github/issues/anshmittal2004/SecurePay-PaymentGateway?style=for-the-badge)](https://github.com/anshmittal2004/SecurePay-PaymentGateway/issues)
-[![Forks](https://img.shields.io/github/forks/anshmittal2004/SecurePay-PaymentGateway?style=for-the-badge)](https://github.com/anshmittal2004/SecurePay-PaymentGateway/network/members)
+## Author
 
-</div>
-
-<details>
-<summary><strong>🔧 Contribution Guide</strong></summary>
-
-1. 🍴 **Fork** the repository
-2. 🌟 **Create** your feature branch (`git checkout -b feature/AmazingFeature`)
-3. 💻 **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
-4. 🚀 **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. 🔄 **Open** a Pull Request
-
-### 🏷️ **Commit Convention**
-- ✨ `feat`: New features
-- 🐛 `fix`: Bug fixes
-- 📚 `docs`: Documentation
-- 💎 `style`: Code style changes
-- ♻️ `refactor`: Code refactoring
-
-</details>
-
-## 📞 Connect & Support
-
-<div align="center">
-
-### 👨‍💻 **Developer**
-**Ansh Mittal** - Fintech Enthusiast & Full-Stack Developer
-
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/anshmittal2004)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/anshmittal2004)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ansh.mittal@example.com)
-
-### 🌟 **Show Your Support**
-If this project helped you, please consider giving it a ⭐!
-
-[![Star History Chart](https://api.star-history.com/svg?repos=anshmittal2004/SecurePay-PaymentGateway&type=Date)](https://star-history.com/#anshmittal2004/SecurePay-PaymentGateway&Date)
-
-</div>
-
-## 📄 License
-
-<div align="center">
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
-
-</div>
+**Ansh Mittal**
+- GitHub: [@anshmittal2004](https://github.com/anshmittal2004)
+- Project: [SecurePay Payment Gateway](https://github.com/anshmittal2004/SecurePay-PaymentGateway)
 
 ---
 
-<div align="center">
-
-**Built with ❤️ for secure, user-friendly payments**
-
-*Inspired by fintech innovation and designed for the future of digital payments*
-
-[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg?style=for-the-badge)](https://github.com/anshmittal2004)
-[![Powered by Coffee](https://img.shields.io/badge/Powered%20by-☕-brown.svg?style=for-the-badge)](https://buymeacoffee.com/anshmittal)
-
-</div>
-
+Built for secure, efficient payment processing with modern web technologies.
