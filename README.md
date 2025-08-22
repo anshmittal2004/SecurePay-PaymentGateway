@@ -10,7 +10,7 @@ A modern, secure payment gateway built with React and Flask, featuring comprehen
 [![Flask](https://img.shields.io/badge/Flask-2.0+-000000?style=flat-square&logo=flask)](https://flask.palletsprojects.com/)
 [![Vite](https://img.shields.io/badge/Vite-4.0+-646CFF?style=flat-square&logo=vite)](https://vitejs.dev/)
 
-[🚀 Quick Start] [🚀 Live Demo](#-live-demo) (#-installation) • [📖 API Docs](#-api-endpoints) • [🛡️ Security](#-security-features)
+[🚀 Quick Start] [🚀 Live Demo](#-live-demo) [(#-installation) • [📖 API Docs](#-api-endpoints) • [🛡️ Security](#-security-features)
 
 </div>
 
